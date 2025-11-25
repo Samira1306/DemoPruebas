@@ -1,0 +1,63 @@
+## Archivos de compilación
+bin/
+obj/
+out/
+[TestResults]/
+*.log
+
+## Archivos temporales de usuario
+*.user
+*.userosscache
+*.suo
+*.userprefs
+*.sln.docstates
+
+## Configuración local
+appsettings.Development.json
+appsettings.Local.json
+appsettings.*.local.json
+
+## Paquetes y dependencias restaurables
+**/packages/
+**/node_modules/
+
+## Cache
+.nuget/
+.npm/
+.yarn/
+.vscode/
+.vs/
+
+## Publicación y artefactos
+publish/
+*.publish.xml
+
+## Build de dotnet
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+## Testing
+.coverage
+coverage/
+coverage*.json
+coverage*.xml
+coverage*.info
+*.trx
+
+## Herramientas de test
+.playwright/
+.selenium/
+
+## Docker
+docker-compose.override.yml
+*.pid
+
+## Sistema operativo
+# Windows
+Thumbs.db
+Desktop.ini
+
+# macOS
+.DS_Store
+*.DS_Store
