@@ -1,4 +1,5 @@
 ﻿using DemoPruebas.Application.Interfaces.RequestIntefaces;
+using Sample.Domain.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
