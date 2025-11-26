@@ -1,10 +1,5 @@
 ﻿using DemoPruebas.Application.Interfaces.RequestIntefaces;
-using Sample.Domain.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using DemoPruebas.Domain.Models;
 
 namespace DemoPruebas.Application.Commands
 {
