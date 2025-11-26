@@ -1,4 +1,4 @@
-﻿namespace Sample.Domain.Models
+﻿namespace DemoPruebas.Domain.Models
 {
     public class Response<TResponse> : Response
     {

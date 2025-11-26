@@ -1,6 +1,6 @@
-﻿using Sample.Domain.CustomAttributes;
+﻿using DemoPruebas.Domain.CustomAttributes;
 
-namespace Sample.Domain.Models;
+namespace DemoPruebas.Domain.Models;
 
 [EntityName("Users")]
 public class Users : IEntity<string>

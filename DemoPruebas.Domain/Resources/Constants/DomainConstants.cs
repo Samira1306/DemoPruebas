@@ -1,4 +1,4 @@
-﻿namespace Sample.Domain.Resources.Constants;
+﻿namespace DemoPruebas.Domain.Resources.Constants;
 
 public static class DomainConstants
 {

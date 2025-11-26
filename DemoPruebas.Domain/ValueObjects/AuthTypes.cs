@@ -1,4 +1,4 @@
-﻿namespace Sample.Domain.ValueObjects
+﻿namespace DemoPruebas.Domain.ValueObjects
 {
 	public enum AuthTypes 
 	{

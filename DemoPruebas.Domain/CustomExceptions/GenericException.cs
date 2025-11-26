@@ -1,4 +1,4 @@
-﻿namespace Sample.Domain.CustomExceptions;
+﻿namespace DemoPruebas.Domain.CustomExceptions;
 
 public class GenericException(string message, string errorCode) : ApplicationException(message ?? "")
 {
