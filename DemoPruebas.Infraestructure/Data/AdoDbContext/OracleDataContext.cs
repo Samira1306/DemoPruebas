@@ -1,4 +1,5 @@
-﻿using Oracle.ManagedDataAccess.Client;
+﻿using DemoPruebas.Application.Interfaces;
+using Oracle.ManagedDataAccess.Client;
 
 namespace DemoPruebas.Infraestructure.Data.AdoDbContext
 {

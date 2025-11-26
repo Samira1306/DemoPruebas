@@ -1,4 +1,7 @@
-﻿namespace DemoPruebas.Infraestructure.Repository
+﻿using DemoPruebas.Domain.Models;
+using DemoPruebas.Infraestructure.Data.EFDbContext;
+
+namespace DemoPruebas.Infraestructure.Repository
 {
     public class UserService(AppDbContext appDbContext) : IUserService
     {

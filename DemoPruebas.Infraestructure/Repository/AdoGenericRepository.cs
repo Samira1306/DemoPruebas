@@ -1,10 +1,9 @@
-﻿using Oracle.ManagedDataAccess.Client;
-using Sample.Application.Interfaces.Repositories;
-using Sample.Domain.CustomAttributes;
-using Sample.Domain.Models;
-using Sample.Domain.ValueObjects;
-using Sample.Infraestructure._shared;
-using Sample.Infraestructure.Data.AdoDbContext;
+﻿using DemoPruebas.Domain.CustomAttributes;
+using DemoPruebas.Domain.Models;
+using DemoPruebas.Domain.ValueObjects;
+using DemoPruebas.Infraestructure._shared;
+using DemoPruebas.Infraestructure.Data.AdoDbContext;
+using Oracle.ManagedDataAccess.Client;
 using System.Data;
 using System.Reflection;
 

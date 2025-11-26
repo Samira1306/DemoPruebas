@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using DemoPruebas.Domain.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace DemoPruebas.Infraestructure.Data.EFDbContext;
 

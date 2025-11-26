@@ -2,6 +2,7 @@
 #nullable disable
 
 using DemoPruebas.Infraestructure.Data.EFDbContext;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 
 namespace Sample.Infraestructure.Migrations

@@ -1,4 +1,9 @@
-﻿namespace DemoPruebas.Infraestructure.Repository;
+﻿using DemoPruebas.Application.Interfaces.Repositories;
+using DemoPruebas.Domain.Models;
+using DemoPruebas.Infraestructure.Data.EFDbContext;
+using Microsoft.EntityFrameworkCore;
+
+namespace DemoPruebas.Infraestructure.Repository;
 
 public class SqlGenericRepository<T, TKey> : ISqlRepository<T, TKey>
     where T : class, IEntity<TKey>, new()
