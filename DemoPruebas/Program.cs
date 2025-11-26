@@ -1,61 +1,66 @@
 using DemoPruebas.Configuration;
 using Serilog;
 using Serilog.Events;
-
-var builder = WebApplication.CreateBuilder(args);
-
-// Add services to the container.
-
-builder.Services.AddControllers();
-
-builder = WebApplication.CreateBuilder(args);
-var corsPolicyName = "AllowAngularFrontend";
-builder.Services.AddCors(options =>
+public class Program
 {
-    options.AddPolicy(corsPolicyName, policy =>
+    private static void Main(string[] args)
     {
-        policy.WithOrigins("http://localhost:4200")
-              .AllowAnyHeader()
-              .AllowAnyMethod()
-              .AllowCredentials();
-    });
-});
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+        var builder = WebApplication.CreateBuilder(args);
 
-//log configuration
-Log.Logger = new LoggerConfiguration()
-    .MinimumLevel.Information()
-    .MinimumLevel.Override("Microsoft", LogEventLevel.Warning)
-    .MinimumLevel.Override("System", LogEventLevel.Warning)
-    //.WriteTo.Console()
-    .WriteTo.File("logs/application.log", rollingInterval: RollingInterval.Infinite,
-        retainedFileCountLimit: null,
-        fileSizeLimitBytes: null,
-        buffered: false,
-        flushToDiskInterval: TimeSpan.FromSeconds(1))
-    .CreateLogger();
+        // Add services to the container.
 
-builder.Host.UseSerilog();
+        builder.Services.AddControllers();
 
-builder.Inject();
+        builder = WebApplication.CreateBuilder(args);
+        var corsPolicyName = "AllowAngularFrontend";
+        builder.Services.AddCors(options =>
+        {
+            options.AddPolicy(corsPolicyName, policy =>
+            {
+                policy.WithOrigins("http://localhost:4200")
+                      .AllowAnyHeader()
+                      .AllowAnyMethod()
+                      .AllowCredentials();
+            });
+        });
+        // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+        builder.Services.AddEndpointsApiExplorer();
+        builder.Services.AddSwaggerGen();
 
-builder.Services.AddControllers();
+        //log configuration
+        Log.Logger = new LoggerConfiguration()
+            .MinimumLevel.Information()
+            .MinimumLevel.Override("Microsoft", LogEventLevel.Warning)
+            .MinimumLevel.Override("System", LogEventLevel.Warning)
+            .WriteTo.Console()
+            .WriteTo.File("logs/application.log", rollingInterval: RollingInterval.Infinite,
+                retainedFileCountLimit: null,
+                fileSizeLimitBytes: null,
+                buffered: false,
+                flushToDiskInterval: TimeSpan.FromSeconds(1))
+            .CreateLogger();
 
-var app = builder.Build();
+        builder.Host.UseSerilog();
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
+        builder.Inject();
+
+        builder.Services.AddControllers();
+
+        var app = builder.Build();
+
+        // Configure the HTTP request pipeline.
+        if (app.Environment.IsDevelopment())
+        {
+            app.UseSwagger();
+            app.UseSwaggerUI();
+        }
+
+        app.UseHttpsRedirection();
+
+        app.UseAuthorization();
+
+        app.MapControllers();
+
+        app.Run();
+    }
 }
-
-app.UseHttpsRedirection();
-
-app.UseAuthorization();
-
-app.MapControllers();
-
-app.Run();
