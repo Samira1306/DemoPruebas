@@ -1,4 +1,5 @@
-﻿using FluentValidation.Results;
+﻿using DemoPruebas.Domain.Models;
+using FluentValidation.Results;
 
 namespace DemoPruebas.Application.Extensions
 {

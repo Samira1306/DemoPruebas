@@ -1,4 +1,6 @@
-﻿namespace DemoPruebas.Application.Interfaces.Repositories;
+﻿using DemoPruebas.Domain.Models;
+
+namespace DemoPruebas.Application.Interfaces.Repositories;
 
 public interface IBatchRepository<T>
 {

@@ -1,4 +1,5 @@
-﻿using MediatR;
+﻿using DemoPruebas.Domain.Models;
+using MediatR;
 
 namespace DemoPruebas.Application.Interfaces.RequestIntefaces;
 

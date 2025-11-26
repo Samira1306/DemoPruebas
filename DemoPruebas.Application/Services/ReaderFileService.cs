@@ -1,4 +1,5 @@
 ﻿using DemoPruebas.Application.Interfaces.Repositories;
+using DemoPruebas.Domain.Models;
 using System.Threading.Channels;
 
 namespace DemoPruebas.Application.Services;
