@@ -1,11 +1,7 @@
 ﻿using DemoPruebas.Application.Interfaces.Repositories;
 using DemoPruebas.Application.Interfaces.Validations;
+using DemoPruebas.Domain.Models;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DemoPruebas.Application.Commands.Handlers
 {
