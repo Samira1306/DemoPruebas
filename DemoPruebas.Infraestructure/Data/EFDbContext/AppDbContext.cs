@@ -1,4 +1,6 @@
-﻿namespace DemoPruebas.Infraestructure.Data.EFDbContext;
+﻿using Microsoft.EntityFrameworkCore;
+
+namespace DemoPruebas.Infraestructure.Data.EFDbContext;
 
 public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(options)
 {

@@ -1,4 +1,6 @@
-﻿namespace DemoPruebas.Infraestructure.Data.AdoDbContext
+﻿using Oracle.ManagedDataAccess.Client;
+
+namespace DemoPruebas.Infraestructure.Data.AdoDbContext
 {
     public class OracleDataContext(OracleConnection connection) : ITransactionScope
     {
