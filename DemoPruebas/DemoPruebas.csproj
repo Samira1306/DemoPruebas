@@ -17,5 +17,8 @@
     <ProjectReference Include="..\DemoPruebas.Application\DemoPruebas.Application.csproj" />
     <ProjectReference Include="..\DemoPruebas.Infraestructure\DemoPruebas.Infraestructure.csproj" />
   </ItemGroup>
-
+<PropertyGroup>
+  <TargetFramework>net8.0</TargetFramework>
+  <PreserveCompilationContext>true</PreserveCompilationContext>
+</PropertyGroup>
 </Project>

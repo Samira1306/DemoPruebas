@@ -7,6 +7,8 @@
 
     <IsPackable>false</IsPackable>
     <IsTestProject>true</IsTestProject>
+
+    <ShadowCopy>false</ShadowCopy>
   </PropertyGroup>
 
   <ItemGroup>
@@ -27,6 +29,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\DemoPruebas\DemoPruebas.csproj" />
     <ProjectReference Include="..\DemoPruebas.Infraestructure\DemoPruebas.Infraestructure.csproj" />
   </ItemGroup>
 

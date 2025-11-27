@@ -33,9 +33,4 @@ public class GenericWebApplicationFactory<TStartup> : WebApplicationFactory<TSta
             }
         });    
     }
-
-    internal HttpClient CreateClient()
-    {
-        throw new NotImplementedException();
-    }
 }

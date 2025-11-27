@@ -19,5 +19,12 @@
   <ItemGroup>
     <Using Include="Xunit" />
   </ItemGroup>
+<ItemGroup>
+  <ProjectReference Include="..\DemoPruebas\DemoPruebas.csproj" />
+</ItemGroup>
+<PropertyGroup>
+  <ShadowCopy>false</ShadowCopy>
+</PropertyGroup>
+
 
 </Project>
