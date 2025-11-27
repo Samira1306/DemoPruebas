@@ -5,7 +5,7 @@ using DemoPruebas.Infraestructure.Data.EFDbContext;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 
-namespace Sample.Infraestructure.Migrations
+namespace DemoPruebas.Infraestructure.Migrations
 {
     [DbContext(typeof(AppDbContext))]
     partial class AppDbContextModelSnapshot : ModelSnapshot

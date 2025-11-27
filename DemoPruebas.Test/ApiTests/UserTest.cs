@@ -23,7 +23,5 @@ namespace DemoPruebas.Test.ApiTests
 
             Assert.NotEmpty(content);
         }
-
-
     }
 }

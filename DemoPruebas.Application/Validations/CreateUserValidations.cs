@@ -2,7 +2,7 @@
 using DemoPruebas.Application.Interfaces.Validations;
 using DemoPruebas.Application.ViewModels;
 using DemoPruebas.Application.Extensions;
-using Sample.Domain.Resources;
+using DemoPruebas.Domain.Resources;
 
 namespace DemoPruebas.Application.Validations;
 
