@@ -1,4 +1,6 @@
-﻿using System.Reflection;
+﻿using DemoPruebas.Domain.Models;
+using Oracle.ManagedDataAccess.Client;
+using System.Reflection;
 
 namespace DemoPruebas.Infraestructure._shared
 {

@@ -1,4 +1,5 @@
-﻿using DemoPruebas.Domain.Models;
+﻿using DemoPruebas.Application.Interfaces.Repositories;
+using DemoPruebas.Domain.Models;
 using DemoPruebas.Infraestructure.Data.EFDbContext;
 
 namespace DemoPruebas.Infraestructure.Repository

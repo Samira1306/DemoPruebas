@@ -1,4 +1,5 @@
-﻿using DemoPruebas.Domain.CustomAttributes;
+﻿using DemoPruebas.Application.Interfaces.Repositories;
+using DemoPruebas.Domain.CustomAttributes;
 using DemoPruebas.Domain.Models;
 using DemoPruebas.Domain.ValueObjects;
 using DemoPruebas.Infraestructure._shared;
@@ -144,38 +145,5 @@ public class AdoGenericRepository<T, TKey>(OracleDataContext oracleContext) : IA
         }
 
         return resultSet;
-    }
-    public async Task<T> FindByIdAsync(string Property, TKey id)
-    {
-        T? entity = default;
-
-        string selectQuery = $"SELECT * FROM {_tableName} WHERE {Property} = '{id}'";
-        using OracleCommand command = _oracleContext.CreateCommand(selectQuery);
-        using OracleDataReader reader = await command.ExecuteReaderAsync();
-        while (await reader.ReadAsync())
-            entity = Extension<T,TKey>.MapEntity(reader);
-
-        return entity!;
-    }    
-    public async Task<List<T>> GetAllAsync(DatabaseType flag)
-    {
-        List<T> values = [];
-
-        string selectQuery = $"SELECT * FROM {_tableName}";
-        using OracleCommand command = _oracleContext.CreateCommand(selectQuery);
-        using OracleDataReader reader = await command.ExecuteReaderAsync();
-        while (reader.Read())
-            values.Add(Extension<T, TKey>.MapEntity(reader));
-        return values;
-    }
-    public async Task UpdateAsync(T entity, string pKProperty, TKey id)
-    {
-        entity.UpdateDate = DateTime.Now;
-
-        string updateQuery = $"UPDATE {_tableName} SET {Extension<T, TKey>.MapSetClause(entity)} WHERE {pKProperty} = '{id}'";
-
-        using OracleCommand command = _oracleContext.CreateCommand(updateQuery);
-
-        await command.ExecuteNonQueryAsync();
     }
 }
