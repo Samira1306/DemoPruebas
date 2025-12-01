@@ -1,10 +1,11 @@
 ﻿using DemoPruebas.Test.Infraestructure;
+using DemoPruebas.TestSupport;
 using Microsoft.VisualStudio.TestPlatform.TestHost;
 using System.Net.Http.Json;
 
 namespace DemoPruebas.Test.ApiTests
 {
-    public class UserTest (GenericWebApplicationFactory<Program> factory) : IClassFixture<GenericWebApplicationFactory<Program>>
+    public class UserTest (GenericWebApplicationFactory<ProgramTest> factory) : IClassFixture<GenericWebApplicationFactory<ProgramTest>>
     {
         private readonly HttpClient _client = factory.CreateClient();
 

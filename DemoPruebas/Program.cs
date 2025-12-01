@@ -1,7 +1,7 @@
 using DemoPruebas.Configuration;
 using Serilog;
 using Serilog.Events;
-public class Program
+class Program
 {
     private static void Main(string[] args)
     {
