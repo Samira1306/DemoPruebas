@@ -47,6 +47,28 @@ Domain (Entities):
 - Resources
 - Models
 
+## Estructura del proyecto
+
+DemoPruebas
+
+    DemoPruebas.Domain
+    Entidades y modelos del dominio
+
+    DemoPruebas.Application
+    Casos de uso, handlers y validaciones
+
+    DemoPruebas.Infraestructure
+    Implementaciones de persistencia y adaptadores externos
+
+    DemoPruebas
+    API y configuracion de la aplicacion
+
+    DemoPruebas.Test
+    Tests de integracion
+
+    DemoPruebas.PuTest
+    Tests unitarios
+
 ## Tecnologias utilizadas
 
 Framework y lenguaje
@@ -91,6 +113,59 @@ Todos los tests de integracion siguen el patron AAA, pero con enfoque en HTTP:
 - **Arrange**: Preparar el request HTTP (datos de entrada, payload JSON)
 - **Act**: Ejecutar la llamada HTTP real al endpoint
 - **Assert**: Verificar la respuesta HTTP
+
+## Ejecucion de pruebas desde consola
+
+Para ejecutar las pruebas del proyecto desde la consola se debe utilizar la herramienta CLI de .NET.
+
+1. Abrir una terminal o consola.
+
+2. Ubicarse en la carpeta raiz del proyecto.
+
+3. Ejecutar el siguiente comando:
+**dotnet test**
+
+Este comando compila el proyecto de pruebas y ejecuta todos los tests disponibles.
+
+## Ejecucion de pruebas desde el visor de Visual Studio
+
+Con el proyecto abierto en Visual Studio es posible ejecutar las pruebas utilizando el **Explorador de pruebas**.
+
+Pasos:
+
+1. Ir al menu **Ver** en la barra superior.
+2. Seleccionar la opcion **Explorador de pruebas**.
+3. Se abrira una ventana donde se listan todos los tests disponibles en el proyecto.
+
+Desde el Explorador de pruebas se pueden ejecutar:
+
+- **Todos los tests** al mismo tiempo.
+- **Tests individuales** de forma manual.
+
+Tambien es posible visualizar el resultado de cada prueba (correcta o fallida) directamente desde este visor.
+
+## Debug en pruebas
+
+Para depurar una prueba directamente desde Visual Studio se puede utilizar la opcion de **Debug Test**.
+
+Pasos:
+
+1. Ubicarse sobre el test que se desea ejecutar en modo depuracion.
+2. Hacer clic derecho sobre el metodo de prueba.
+3. Seleccionar la opcion **Debug Test**.
+
+Esto ejecutara la prueba en modo depuracion, permitiendo utilizar breakpoints, inspeccionar variables y analizar el flujo de ejecucion paso a paso.
+
+## Ejecucion de la aplicacion
+
+1. Clonar el repositorio
+2. Abrir la solucion en Visual Studio
+3. Seleccionar el proyecto **DemoPruebas** como proyecto de inicio
+4. Ejecutar la aplicacion
+
+Tambien puede ejecutarse desde la consola con:
+
+**dotnet run**
 
 
 
